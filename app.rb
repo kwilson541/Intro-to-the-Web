@@ -18,7 +18,13 @@ get '/sleepy' do
 	"Is it time for bed yet?"
 end
 
-get '/cat' do
-	@name_generator = ["Amigo", "Oscar", "Viking"].sample
+get '/random-cat' do
+	@name = ["Amigo", "Oscar", "Viking"].sample
+	erb(:index)
+end
+
+get '/named-cat' do
+	p params
+	@name = params[:name]
 	erb(:index)
 end
