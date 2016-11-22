@@ -1,5 +1,7 @@
 require 'sinatra'
 
+set :session_secret, 'super secret'
+
 get '/' do
 	'hello!'
 end
@@ -14,4 +16,10 @@ end
 
 get '/sleepy' do
 	"Is it time for bed yet?"
+end
+
+get '/cat' do
+	"<div style='border: 3px dashed red'>
+	<img src='http://a.fod4.com/misc/Two%20Cat%20Big%20Mac.gif' alt='Cat picture'>
+	</div>"
 end
