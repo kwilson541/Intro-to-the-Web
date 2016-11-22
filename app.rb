@@ -19,7 +19,5 @@ get '/sleepy' do
 end
 
 get '/cat' do
-	"<div style='border: 3px dashed red'>
-	<img src='http://a.fod4.com/misc/Two%20Cat%20Big%20Mac.gif' alt='Cat picture'>
-	</div>"
+	erb(:index)
 end
